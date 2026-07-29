@@ -434,28 +434,41 @@ body {
   z-index: 1000;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE (CORREGIDO) */
 @media (max-width: 768px) {
+  /* Muestra el botón de hamburguesa */
   .menu-toggle {
-    display: block;
+    display: block !important;
   }
+
+  /* Oculta el menú desplegable por defecto */
   .nav-links {
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--azul-oscuro);
+    background-color: var(--azul-oscuro);
     flex-direction: column;
-    padding: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.3s ease;
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   }
+
+  /* Muestra el menú cuando JS activa la clase .active */
   .nav-links.active {
-    max-height: 450px;
+    display: flex !important;
   }
-  .hero-title {
-    font-size: 28px;
+
+  /* Arreglo de altura e imagen de las tarjetas de equipo */
+  .member-img-wrap {
+    height: 320px; /* Altura adecuada para ver cuerpo y rostro */
+  }
+
+  .member-img-wrap img {
+    height: 100%;
+    object-position: center top; /* Alinea para no cortar cabezas */
   }
 }
 
