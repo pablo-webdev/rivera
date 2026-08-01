@@ -479,7 +479,7 @@ body {
   color: #666;
 }
 
-.footer .kraken-credit a {
+.footer a {
   color: var(--dorado);
   text-decoration: none;
   font-weight: 700;
